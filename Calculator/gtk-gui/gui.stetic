@@ -31,6 +31,7 @@
             <property name="Type">TextOnly</property>
             <property name="Label" translatable="yes">1</property>
             <property name="UseUnderline">True</property>
+            <signal name="Clicked" handler="ButtonNumberClick" />
           </widget>
           <packing>
             <property name="X">20</property>
@@ -46,6 +47,7 @@
             <property name="Type">TextOnly</property>
             <property name="Label" translatable="yes">2</property>
             <property name="UseUnderline">True</property>
+            <signal name="Clicked" handler="ButtonNumberClick" />
           </widget>
           <packing>
             <property name="X">70</property>
@@ -61,6 +63,7 @@
             <property name="Type">TextOnly</property>
             <property name="Label" translatable="yes">3</property>
             <property name="UseUnderline">True</property>
+            <signal name="Clicked" handler="ButtonNumberClick" />
           </widget>
           <packing>
             <property name="X">120</property>
@@ -76,6 +79,7 @@
             <property name="Type">TextOnly</property>
             <property name="Label" translatable="yes">4</property>
             <property name="UseUnderline">True</property>
+            <signal name="Clicked" handler="ButtonNumberClick" />
           </widget>
           <packing>
             <property name="X">20</property>
@@ -91,6 +95,7 @@
             <property name="Type">TextOnly</property>
             <property name="Label" translatable="yes">5</property>
             <property name="UseUnderline">True</property>
+            <signal name="Clicked" handler="ButtonNumberClick" />
           </widget>
           <packing>
             <property name="X">70</property>
@@ -106,6 +111,7 @@
             <property name="Type">TextOnly</property>
             <property name="Label" translatable="yes">6</property>
             <property name="UseUnderline">True</property>
+            <signal name="Clicked" handler="ButtonNumberClick" />
           </widget>
           <packing>
             <property name="X">120</property>
@@ -121,6 +127,7 @@
             <property name="Type">TextOnly</property>
             <property name="Label" translatable="yes">7</property>
             <property name="UseUnderline">True</property>
+            <signal name="Clicked" handler="ButtonNumberClick" />
           </widget>
           <packing>
             <property name="X">20</property>
@@ -136,6 +143,7 @@
             <property name="Type">TextOnly</property>
             <property name="Label" translatable="yes">8</property>
             <property name="UseUnderline">True</property>
+            <signal name="Clicked" handler="ButtonNumberClick" />
           </widget>
           <packing>
             <property name="X">70</property>
@@ -151,6 +159,7 @@
             <property name="Type">TextOnly</property>
             <property name="Label" translatable="yes">9</property>
             <property name="UseUnderline">True</property>
+            <signal name="Clicked" handler="ButtonNumberClick" />
           </widget>
           <packing>
             <property name="X">120</property>
@@ -160,12 +169,13 @@
         <child>
           <widget class="Gtk.Button" id="buttonResult">
             <property name="MemberName" />
-            <property name="WidthRequest">150</property>
+            <property name="WidthRequest">100</property>
             <property name="HeightRequest">50</property>
             <property name="CanFocus">True</property>
             <property name="Type">TextOnly</property>
             <property name="Label" translatable="yes">=</property>
             <property name="UseUnderline">True</property>
+            <signal name="Clicked" handler="ButtonResultClick" />
           </widget>
           <packing>
             <property name="X">20</property>
@@ -181,6 +191,7 @@
             <property name="Type">TextOnly</property>
             <property name="Label" translatable="yes">+</property>
             <property name="UseUnderline">True</property>
+            <signal name="Clicked" handler="ButtonOperatorClick" />
           </widget>
           <packing>
             <property name="X">170</property>
@@ -196,6 +207,7 @@
             <property name="Type">TextOnly</property>
             <property name="Label" translatable="yes">-</property>
             <property name="UseUnderline">True</property>
+            <signal name="Clicked" handler="ButtonOperatorClick" />
           </widget>
           <packing>
             <property name="X">170</property>
@@ -211,6 +223,7 @@
             <property name="Type">TextOnly</property>
             <property name="Label" translatable="yes">*</property>
             <property name="UseUnderline">True</property>
+            <signal name="Clicked" handler="ButtonOperatorClick" />
           </widget>
           <packing>
             <property name="X">170</property>
@@ -226,6 +239,7 @@
             <property name="Type">TextOnly</property>
             <property name="Label" translatable="yes">/</property>
             <property name="UseUnderline">True</property>
+            <signal name="Clicked" handler="ButtonOperatorClick" />
           </widget>
           <packing>
             <property name="X">170</property>
@@ -243,6 +257,22 @@
           <packing>
             <property name="X">20</property>
             <property name="Y">10</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="Gtk.Button" id="button15">
+            <property name="MemberName" />
+            <property name="WidthRequest">50</property>
+            <property name="HeightRequest">50</property>
+            <property name="CanFocus">True</property>
+            <property name="Type">TextOnly</property>
+            <property name="Label" translatable="yes">0</property>
+            <property name="UseUnderline">True</property>
+            <signal name="Clicked" handler="ButtonNumberClick" />
+          </widget>
+          <packing>
+            <property name="X">120</property>
+            <property name="Y">200</property>
           </packing>
         </child>
       </widget>

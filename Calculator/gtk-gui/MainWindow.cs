@@ -7,8 +7,6 @@ public partial class MainWindow
 
 	private global::Gtk.Button button1;
 
-	private global::Gtk.Label calcLabel;
-
 	private global::Gtk.Button button2;
 
 	private global::Gtk.Button button3;
@@ -34,6 +32,10 @@ public partial class MainWindow
 	private global::Gtk.Button buttonMultiply;
 
 	private global::Gtk.Button buttonDivision;
+
+	private global::Gtk.Label calcLabel;
+
+	private global::Gtk.Button button15;
 
 	protected virtual void Build()
 	{
@@ -65,17 +67,6 @@ public partial class MainWindow
 		w1.X = 20;
 		w1.Y = 50;
 		// Container child FixedCont.Gtk.Fixed+FixedChild
-		this.calcLabel = new global::Gtk.Label();
-		this.calcLabel.WidthRequest = 300;
-		this.calcLabel.HeightRequest = 40;
-		this.calcLabel.Name = "calcLabel";
-		this.calcLabel.Xalign = 1F;
-		this.calcLabel.Yalign = 1F;
-		this.FixedCont.Add(this.calcLabel);
-		global::Gtk.Fixed.FixedChild w2 = ((global::Gtk.Fixed.FixedChild)(this.FixedCont[this.calcLabel]));
-		w2.X = 20;
-		w2.Y = 10;
-		// Container child FixedCont.Gtk.Fixed+FixedChild
 		this.button2 = new global::Gtk.Button();
 		this.button2.WidthRequest = 50;
 		this.button2.HeightRequest = 50;
@@ -84,9 +75,9 @@ public partial class MainWindow
 		this.button2.UseUnderline = true;
 		this.button2.Label = global::Mono.Unix.Catalog.GetString("2");
 		this.FixedCont.Add(this.button2);
-		global::Gtk.Fixed.FixedChild w3 = ((global::Gtk.Fixed.FixedChild)(this.FixedCont[this.button2]));
-		w3.X = 70;
-		w3.Y = 50;
+		global::Gtk.Fixed.FixedChild w2 = ((global::Gtk.Fixed.FixedChild)(this.FixedCont[this.button2]));
+		w2.X = 70;
+		w2.Y = 50;
 		// Container child FixedCont.Gtk.Fixed+FixedChild
 		this.button3 = new global::Gtk.Button();
 		this.button3.WidthRequest = 50;
@@ -96,9 +87,9 @@ public partial class MainWindow
 		this.button3.UseUnderline = true;
 		this.button3.Label = global::Mono.Unix.Catalog.GetString("3");
 		this.FixedCont.Add(this.button3);
-		global::Gtk.Fixed.FixedChild w4 = ((global::Gtk.Fixed.FixedChild)(this.FixedCont[this.button3]));
-		w4.X = 120;
-		w4.Y = 50;
+		global::Gtk.Fixed.FixedChild w3 = ((global::Gtk.Fixed.FixedChild)(this.FixedCont[this.button3]));
+		w3.X = 120;
+		w3.Y = 50;
 		// Container child FixedCont.Gtk.Fixed+FixedChild
 		this.button4 = new global::Gtk.Button();
 		this.button4.WidthRequest = 50;
@@ -108,9 +99,9 @@ public partial class MainWindow
 		this.button4.UseUnderline = true;
 		this.button4.Label = global::Mono.Unix.Catalog.GetString("4");
 		this.FixedCont.Add(this.button4);
-		global::Gtk.Fixed.FixedChild w5 = ((global::Gtk.Fixed.FixedChild)(this.FixedCont[this.button4]));
-		w5.X = 20;
-		w5.Y = 100;
+		global::Gtk.Fixed.FixedChild w4 = ((global::Gtk.Fixed.FixedChild)(this.FixedCont[this.button4]));
+		w4.X = 20;
+		w4.Y = 100;
 		// Container child FixedCont.Gtk.Fixed+FixedChild
 		this.button5 = new global::Gtk.Button();
 		this.button5.WidthRequest = 50;
@@ -120,9 +111,9 @@ public partial class MainWindow
 		this.button5.UseUnderline = true;
 		this.button5.Label = global::Mono.Unix.Catalog.GetString("5");
 		this.FixedCont.Add(this.button5);
-		global::Gtk.Fixed.FixedChild w6 = ((global::Gtk.Fixed.FixedChild)(this.FixedCont[this.button5]));
-		w6.X = 70;
-		w6.Y = 100;
+		global::Gtk.Fixed.FixedChild w5 = ((global::Gtk.Fixed.FixedChild)(this.FixedCont[this.button5]));
+		w5.X = 70;
+		w5.Y = 100;
 		// Container child FixedCont.Gtk.Fixed+FixedChild
 		this.button6 = new global::Gtk.Button();
 		this.button6.WidthRequest = 50;
@@ -132,9 +123,9 @@ public partial class MainWindow
 		this.button6.UseUnderline = true;
 		this.button6.Label = global::Mono.Unix.Catalog.GetString("6");
 		this.FixedCont.Add(this.button6);
-		global::Gtk.Fixed.FixedChild w7 = ((global::Gtk.Fixed.FixedChild)(this.FixedCont[this.button6]));
-		w7.X = 120;
-		w7.Y = 100;
+		global::Gtk.Fixed.FixedChild w6 = ((global::Gtk.Fixed.FixedChild)(this.FixedCont[this.button6]));
+		w6.X = 120;
+		w6.Y = 100;
 		// Container child FixedCont.Gtk.Fixed+FixedChild
 		this.button7 = new global::Gtk.Button();
 		this.button7.WidthRequest = 50;
@@ -144,9 +135,9 @@ public partial class MainWindow
 		this.button7.UseUnderline = true;
 		this.button7.Label = global::Mono.Unix.Catalog.GetString("7");
 		this.FixedCont.Add(this.button7);
-		global::Gtk.Fixed.FixedChild w8 = ((global::Gtk.Fixed.FixedChild)(this.FixedCont[this.button7]));
-		w8.X = 20;
-		w8.Y = 150;
+		global::Gtk.Fixed.FixedChild w7 = ((global::Gtk.Fixed.FixedChild)(this.FixedCont[this.button7]));
+		w7.X = 20;
+		w7.Y = 150;
 		// Container child FixedCont.Gtk.Fixed+FixedChild
 		this.button8 = new global::Gtk.Button();
 		this.button8.WidthRequest = 50;
@@ -156,9 +147,9 @@ public partial class MainWindow
 		this.button8.UseUnderline = true;
 		this.button8.Label = global::Mono.Unix.Catalog.GetString("8");
 		this.FixedCont.Add(this.button8);
-		global::Gtk.Fixed.FixedChild w9 = ((global::Gtk.Fixed.FixedChild)(this.FixedCont[this.button8]));
-		w9.X = 70;
-		w9.Y = 150;
+		global::Gtk.Fixed.FixedChild w8 = ((global::Gtk.Fixed.FixedChild)(this.FixedCont[this.button8]));
+		w8.X = 70;
+		w8.Y = 150;
 		// Container child FixedCont.Gtk.Fixed+FixedChild
 		this.button9 = new global::Gtk.Button();
 		this.button9.WidthRequest = 50;
@@ -168,21 +159,21 @@ public partial class MainWindow
 		this.button9.UseUnderline = true;
 		this.button9.Label = global::Mono.Unix.Catalog.GetString("9");
 		this.FixedCont.Add(this.button9);
-		global::Gtk.Fixed.FixedChild w10 = ((global::Gtk.Fixed.FixedChild)(this.FixedCont[this.button9]));
-		w10.X = 120;
-		w10.Y = 150;
+		global::Gtk.Fixed.FixedChild w9 = ((global::Gtk.Fixed.FixedChild)(this.FixedCont[this.button9]));
+		w9.X = 120;
+		w9.Y = 150;
 		// Container child FixedCont.Gtk.Fixed+FixedChild
 		this.buttonResult = new global::Gtk.Button();
-		this.buttonResult.WidthRequest = 150;
+		this.buttonResult.WidthRequest = 100;
 		this.buttonResult.HeightRequest = 50;
 		this.buttonResult.CanFocus = true;
 		this.buttonResult.Name = "buttonResult";
 		this.buttonResult.UseUnderline = true;
 		this.buttonResult.Label = global::Mono.Unix.Catalog.GetString("=");
 		this.FixedCont.Add(this.buttonResult);
-		global::Gtk.Fixed.FixedChild w11 = ((global::Gtk.Fixed.FixedChild)(this.FixedCont[this.buttonResult]));
-		w11.X = 20;
-		w11.Y = 200;
+		global::Gtk.Fixed.FixedChild w10 = ((global::Gtk.Fixed.FixedChild)(this.FixedCont[this.buttonResult]));
+		w10.X = 20;
+		w10.Y = 200;
 		// Container child FixedCont.Gtk.Fixed+FixedChild
 		this.buttonPlus = new global::Gtk.Button();
 		this.buttonPlus.WidthRequest = 50;
@@ -192,9 +183,9 @@ public partial class MainWindow
 		this.buttonPlus.UseUnderline = true;
 		this.buttonPlus.Label = global::Mono.Unix.Catalog.GetString("+");
 		this.FixedCont.Add(this.buttonPlus);
-		global::Gtk.Fixed.FixedChild w12 = ((global::Gtk.Fixed.FixedChild)(this.FixedCont[this.buttonPlus]));
-		w12.X = 170;
-		w12.Y = 50;
+		global::Gtk.Fixed.FixedChild w11 = ((global::Gtk.Fixed.FixedChild)(this.FixedCont[this.buttonPlus]));
+		w11.X = 170;
+		w11.Y = 50;
 		// Container child FixedCont.Gtk.Fixed+FixedChild
 		this.buttonMinus = new global::Gtk.Button();
 		this.buttonMinus.WidthRequest = 50;
@@ -204,9 +195,9 @@ public partial class MainWindow
 		this.buttonMinus.UseUnderline = true;
 		this.buttonMinus.Label = global::Mono.Unix.Catalog.GetString("-");
 		this.FixedCont.Add(this.buttonMinus);
-		global::Gtk.Fixed.FixedChild w13 = ((global::Gtk.Fixed.FixedChild)(this.FixedCont[this.buttonMinus]));
-		w13.X = 170;
-		w13.Y = 100;
+		global::Gtk.Fixed.FixedChild w12 = ((global::Gtk.Fixed.FixedChild)(this.FixedCont[this.buttonMinus]));
+		w12.X = 170;
+		w12.Y = 100;
 		// Container child FixedCont.Gtk.Fixed+FixedChild
 		this.buttonMultiply = new global::Gtk.Button();
 		this.buttonMultiply.WidthRequest = 50;
@@ -216,9 +207,9 @@ public partial class MainWindow
 		this.buttonMultiply.UseUnderline = true;
 		this.buttonMultiply.Label = global::Mono.Unix.Catalog.GetString("*");
 		this.FixedCont.Add(this.buttonMultiply);
-		global::Gtk.Fixed.FixedChild w14 = ((global::Gtk.Fixed.FixedChild)(this.FixedCont[this.buttonMultiply]));
-		w14.X = 170;
-		w14.Y = 150;
+		global::Gtk.Fixed.FixedChild w13 = ((global::Gtk.Fixed.FixedChild)(this.FixedCont[this.buttonMultiply]));
+		w13.X = 170;
+		w13.Y = 150;
 		// Container child FixedCont.Gtk.Fixed+FixedChild
 		this.buttonDivision = new global::Gtk.Button();
 		this.buttonDivision.WidthRequest = 50;
@@ -228,9 +219,32 @@ public partial class MainWindow
 		this.buttonDivision.UseUnderline = true;
 		this.buttonDivision.Label = global::Mono.Unix.Catalog.GetString("/");
 		this.FixedCont.Add(this.buttonDivision);
-		global::Gtk.Fixed.FixedChild w15 = ((global::Gtk.Fixed.FixedChild)(this.FixedCont[this.buttonDivision]));
-		w15.X = 170;
-		w15.Y = 200;
+		global::Gtk.Fixed.FixedChild w14 = ((global::Gtk.Fixed.FixedChild)(this.FixedCont[this.buttonDivision]));
+		w14.X = 170;
+		w14.Y = 200;
+		// Container child FixedCont.Gtk.Fixed+FixedChild
+		this.calcLabel = new global::Gtk.Label();
+		this.calcLabel.WidthRequest = 200;
+		this.calcLabel.HeightRequest = 40;
+		this.calcLabel.Name = "calcLabel";
+		this.calcLabel.Xalign = 1F;
+		this.calcLabel.Yalign = 1F;
+		this.FixedCont.Add(this.calcLabel);
+		global::Gtk.Fixed.FixedChild w15 = ((global::Gtk.Fixed.FixedChild)(this.FixedCont[this.calcLabel]));
+		w15.X = 20;
+		w15.Y = 10;
+		// Container child FixedCont.Gtk.Fixed+FixedChild
+		this.button15 = new global::Gtk.Button();
+		this.button15.WidthRequest = 50;
+		this.button15.HeightRequest = 50;
+		this.button15.CanFocus = true;
+		this.button15.Name = "button15";
+		this.button15.UseUnderline = true;
+		this.button15.Label = global::Mono.Unix.Catalog.GetString("0");
+		this.FixedCont.Add(this.button15);
+		global::Gtk.Fixed.FixedChild w16 = ((global::Gtk.Fixed.FixedChild)(this.FixedCont[this.button15]));
+		w16.X = 120;
+		w16.Y = 200;
 		this.Add(this.FixedCont);
 		if ((this.Child != null))
 		{
@@ -238,5 +252,20 @@ public partial class MainWindow
 		}
 		this.Show();
 		this.DeleteEvent += new global::Gtk.DeleteEventHandler(this.OnDeleteEvent);
+		this.button1.Clicked += new global::System.EventHandler(this.ButtonNumberClick);
+		this.button2.Clicked += new global::System.EventHandler(this.ButtonNumberClick);
+		this.button3.Clicked += new global::System.EventHandler(this.ButtonNumberClick);
+		this.button4.Clicked += new global::System.EventHandler(this.ButtonNumberClick);
+		this.button5.Clicked += new global::System.EventHandler(this.ButtonNumberClick);
+		this.button6.Clicked += new global::System.EventHandler(this.ButtonNumberClick);
+		this.button7.Clicked += new global::System.EventHandler(this.ButtonNumberClick);
+		this.button8.Clicked += new global::System.EventHandler(this.ButtonNumberClick);
+		this.button9.Clicked += new global::System.EventHandler(this.ButtonNumberClick);
+		this.buttonResult.Clicked += new global::System.EventHandler(this.ButtonResultClick);
+		this.buttonPlus.Clicked += new global::System.EventHandler(this.ButtonOperatorClick);
+		this.buttonMinus.Clicked += new global::System.EventHandler(this.ButtonOperatorClick);
+		this.buttonMultiply.Clicked += new global::System.EventHandler(this.ButtonOperatorClick);
+		this.buttonDivision.Clicked += new global::System.EventHandler(this.ButtonOperatorClick);
+		this.button15.Clicked += new global::System.EventHandler(this.ButtonNumberClick);
 	}
 }
