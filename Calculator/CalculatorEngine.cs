@@ -65,5 +65,19 @@ namespace Calculator
             Numbers[1]         = 0;
             UsedOperator       = Operator.None;
         }
+
+        public string PrintState()
+        {
+            string result = Numbers[0].ToString();
+            if (UsedOperator != Operator.None)
+            {
+                result += ' ' + operatorChar[UsedOperator];
+            }
+            if (Numbers[1] != 0)
+            {
+                result += ' ' + Numbers[1].ToString();
+            }
+            return result;
+        }
     }
 }
