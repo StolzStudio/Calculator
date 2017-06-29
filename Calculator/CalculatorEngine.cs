@@ -34,9 +34,16 @@ namespace Calculator
 
         public void AddDigit(char aDigit)
         {
-            Numbers[UsedNumberIterator] = decimal.Parse(Numbers[UsedNumberIterator].ToString() 
-                                                        +
-                                                        aDigit);
+            if (Numbers[UsedNumberIterator] != 0)
+            {
+                Numbers[UsedNumberIterator] = decimal.Parse(Numbers[UsedNumberIterator].ToString()
+                                                            +
+                                                            aDigit);
+            }
+            else
+            {
+                Numbers[UsedNumberIterator] = aDigit;
+            }
         }
 
         public void MakeCalculation()
