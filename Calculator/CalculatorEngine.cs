@@ -23,5 +23,12 @@ namespace Calculator
             UsedOperator       = Operator.None;
             UsedNumberIterator = 0;
         }
+
+        public void AddDigit(char aDigit)
+        {
+            Numbers[UsedNumberIterator] = decimal.Parse(Numbers[UsedNumberIterator].ToString() 
+                                                        +
+                                                        aDigit);
+        }
     }
 }
