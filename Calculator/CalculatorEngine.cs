@@ -11,7 +11,7 @@ namespace Calculator
         public Operator UsedOperator { get; set; }
         public Int32 UsedNumberIterator;
 
-        private Dictionary<Operator, char> operatorChar;
+        private Dictionary<char, Operator> operatorChar;
 
         public CalculatorEngine()
         {
@@ -20,12 +20,12 @@ namespace Calculator
 
         private void InitFields()
         {
-            operatorChar = new Dictionary<Operator, char>();
-            operatorChar.Add(Operator.None,     ' ');
-            operatorChar.Add(Operator.Plus,     '+');
-            operatorChar.Add(Operator.Minus,    '-');
-            operatorChar.Add(Operator.Multiply, '*');
-            operatorChar.Add(Operator.Division, '/');
+            operatorChar = new Dictionary<char, Operator>();
+            operatorChar.Add(' ', Operator.None);
+            operatorChar.Add('+', Operator.Plus);
+            operatorChar.Add('-', Operator.Minus);
+            operatorChar.Add('*', Operator.Multiply);
+            operatorChar.Add('/', Operator.Division);
 
             Numbers            = new List<decimal>() {0, 0};
             UsedOperator       = Operator.None;
@@ -42,8 +42,14 @@ namespace Calculator
             }
             else
             {
-                Numbers[UsedNumberIterator] = aDigit;
+                Numbers[UsedNumberIterator] = decimal.Parse("" + aDigit);
             }
+        }
+
+        public void SetOperator(char aOperatorChar)
+        {
+            UsedOperator = operatorChar[aOperatorChar];
+            UsedNumberIterator = 1;
         }
 
         public void MakeCalculation()
@@ -75,14 +81,22 @@ namespace Calculator
 
         public string PrintState()
         {
-            string result = Numbers[0].ToString();
+            string result = "";
+            result += Numbers[0].ToString();
+
             if (UsedOperator != Operator.None)
             {
-                result += ' ' + operatorChar[UsedOperator];
+                foreach (var key in operatorChar.Keys)
+                {
+                    if (UsedOperator == operatorChar[key])
+                    {
+                        result += " " + key;
+                    }
+                }
             }
             if (Numbers[1] != 0)
             {
-                result += ' ' + Numbers[1].ToString();
+                result += " " + Numbers[1].ToString();
             }
             return result;
         }
