@@ -9,8 +9,9 @@ namespace Calculator
     {
         public List<decimal> Numbers { get; set; }
         public Operator UsedOperator { get; set; }
-        public Int32 UsedNumberIterator;    
+        public Int32 UsedNumberIterator;
 
+        private Dictionary<Operator, char> operatorChar;
 
         public CalculatorEngine()
         {
@@ -19,6 +20,13 @@ namespace Calculator
 
         private void InitFields()
         {
+            operatorChar = new Dictionary<Operator, char>();
+            operatorChar.Add(Operator.None,     ' ');
+            operatorChar.Add(Operator.Plus,     '+');
+            operatorChar.Add(Operator.Minus,    '-');
+            operatorChar.Add(Operator.Multiply, '*');
+            operatorChar.Add(Operator.Division, '/');
+
             Numbers            = new List<decimal>() {0, 0};
             UsedOperator       = Operator.None;
             UsedNumberIterator = 0;
@@ -29,6 +37,33 @@ namespace Calculator
             Numbers[UsedNumberIterator] = decimal.Parse(Numbers[UsedNumberIterator].ToString() 
                                                         +
                                                         aDigit);
+        }
+
+        public void MakeCalculation()
+        {
+            switch (UsedOperator)
+            {
+                case Operator.Plus:
+                    Numbers[0] += Numbers[1];
+                    break;
+                case Operator.Minus:
+                    Numbers[0] -= Numbers[1];
+                    break;
+                case Operator.Multiply:
+                    Numbers[0] *= Numbers[1];
+                    break;
+                case Operator.Division:
+                    if (Numbers[1] != 0)
+                    {
+                        Numbers[0] /= Numbers[1];
+                    }
+                    break;
+                default:
+                    break;
+            }
+            UsedNumberIterator = 0;
+            Numbers[1]         = 0;
+            UsedOperator       = Operator.None;
         }
     }
 }
