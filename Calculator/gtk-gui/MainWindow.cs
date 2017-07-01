@@ -296,5 +296,6 @@ public partial class MainWindow
 		this.buttonDivision.Clicked += new global::System.EventHandler(this.ButtonOperatorClick);
 		this.button15.Clicked += new global::System.EventHandler(this.ButtonNumberClick);
 		this.buttonDot.Clicked += new global::System.EventHandler(this.ButtonDotClick);
+		this.buttonClear.Clicked += new global::System.EventHandler(this.ButtonClearClick);
 	}
 }

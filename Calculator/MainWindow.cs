@@ -10,6 +10,7 @@ public partial class MainWindow : Gtk.Window
     {
         Engine = new CalculatorEngine();
         Build();
+        InvalidateLabel();
     }
 
     protected void OnDeleteEvent(object sender, DeleteEventArgs a)
@@ -41,6 +42,11 @@ public partial class MainWindow : Gtk.Window
         Engine.SetDot();
     }
 
+    private void ButtonClearClick(object sender, EventArgs args)
+    {
+        Engine.Clear();
+        InvalidateLabel();
+    }
     private void InvalidateLabel()
     {
         calcLabel.Text = Engine.PrintState();
