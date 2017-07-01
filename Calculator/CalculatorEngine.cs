@@ -1,4 +1,4 @@
-﻿using System;
+﻿﻿using System;
 using System.Collections.Generic;
 
 namespace Calculator
@@ -100,7 +100,7 @@ namespace Calculator
             string newNum = Numbers[UsedNumberIterator].ToString();
             if (newNum.Length > 1)
             {
-                newNum.Remove(newNum.Length - 1, 1);
+                newNum = newNum.TrimEnd(newNum[newNum.Length - 1]);
                 Numbers[UsedNumberIterator] = decimal.Parse(newNum);
             }
             else
