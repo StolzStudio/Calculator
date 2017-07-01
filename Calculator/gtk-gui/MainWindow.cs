@@ -39,12 +39,14 @@ public partial class MainWindow
 
 	private global::Gtk.Button buttonDot;
 
+	private global::Gtk.Button buttonClear;
+
 	protected virtual void Build()
 	{
 		global::Stetic.Gui.Initialize(this);
 		// Widget MainWindow
 		this.WidthRequest = 240;
-		this.HeightRequest = 270;
+		this.HeightRequest = 320;
 		this.Name = "MainWindow";
 		this.Title = global::Mono.Unix.Catalog.GetString("MainWindow");
 		this.WindowPosition = ((global::Gtk.WindowPosition)(4));
@@ -166,7 +168,7 @@ public partial class MainWindow
 		w9.Y = 150;
 		// Container child FixedCont.Gtk.Fixed+FixedChild
 		this.buttonResult = new global::Gtk.Button();
-		this.buttonResult.WidthRequest = 50;
+		this.buttonResult.WidthRequest = 200;
 		this.buttonResult.HeightRequest = 50;
 		this.buttonResult.CanFocus = true;
 		this.buttonResult.Name = "buttonResult";
@@ -174,8 +176,8 @@ public partial class MainWindow
 		this.buttonResult.Label = global::Mono.Unix.Catalog.GetString("=");
 		this.FixedCont.Add(this.buttonResult);
 		global::Gtk.Fixed.FixedChild w10 = ((global::Gtk.Fixed.FixedChild)(this.FixedCont[this.buttonResult]));
-		w10.X = 120;
-		w10.Y = 200;
+		w10.X = 20;
+		w10.Y = 250;
 		// Container child FixedCont.Gtk.Fixed+FixedChild
 		this.buttonPlus = new global::Gtk.Button();
 		this.buttonPlus.WidthRequest = 50;
@@ -259,6 +261,18 @@ public partial class MainWindow
 		global::Gtk.Fixed.FixedChild w17 = ((global::Gtk.Fixed.FixedChild)(this.FixedCont[this.buttonDot]));
 		w17.X = 70;
 		w17.Y = 200;
+		// Container child FixedCont.Gtk.Fixed+FixedChild
+		this.buttonClear = new global::Gtk.Button();
+		this.buttonClear.WidthRequest = 50;
+		this.buttonClear.HeightRequest = 50;
+		this.buttonClear.CanFocus = true;
+		this.buttonClear.Name = "buttonClear";
+		this.buttonClear.UseUnderline = true;
+		this.buttonClear.Label = global::Mono.Unix.Catalog.GetString("C");
+		this.FixedCont.Add(this.buttonClear);
+		global::Gtk.Fixed.FixedChild w18 = ((global::Gtk.Fixed.FixedChild)(this.FixedCont[this.buttonClear]));
+		w18.X = 120;
+		w18.Y = 200;
 		this.Add(this.FixedCont);
 		if ((this.Child != null))
 		{
