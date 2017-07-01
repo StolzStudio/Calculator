@@ -1,4 +1,4 @@
-﻿using System;
+﻿﻿using System;
 using Gtk;
 using Calculator;
 
@@ -10,6 +10,7 @@ public partial class MainWindow : Gtk.Window
     {
         Engine = new CalculatorEngine();
         Build();
+        InvalidateLabel();
     }
 
     protected void OnDeleteEvent(object sender, DeleteEventArgs a)
