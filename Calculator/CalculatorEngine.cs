@@ -95,6 +95,29 @@ namespace Calculator
             }
         }
 
+        public void Clear()
+        {
+            string newNum = Numbers[UsedNumberIterator].ToString();
+            if (newNum.Length > 1)
+            {
+                newNum.Remove(newNum.Length - 1, 1);
+                Numbers[UsedNumberIterator] = decimal.Parse(newNum);
+            }
+            else
+            {
+                if (newNum == "0")
+                {
+                    UsedOperator = Operator.None;
+                    UsedNumberIterator = 0;
+                }
+                else
+                {
+                    newNum = "0";
+                    Numbers[UsedNumberIterator] = decimal.Parse(newNum);
+                }
+            }
+        }
+
         public string PrintState()
         {
             string result = "";
