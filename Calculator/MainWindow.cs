@@ -27,12 +27,18 @@ public partial class MainWindow : Gtk.Window
     private void ButtonOperatorClick(object sender, EventArgs args)
     {
         Engine.SetOperator((sender as Button).Label[0]); 
+        InvalidateLabel();
     }
 
     private void ButtonResultClick(object sender, EventArgs args)
     {
         Engine.MakeCalculation();
         InvalidateLabel();
+    }
+
+    private void ButtonDotClick(object sender, EventArgs args)
+    {
+        Engine.SetDot();
     }
 
     private void InvalidateLabel()

@@ -37,6 +37,8 @@ public partial class MainWindow
 
 	private global::Gtk.Button button15;
 
+	private global::Gtk.Button buttonDot;
+
 	protected virtual void Build()
 	{
 		global::Stetic.Gui.Initialize(this);
@@ -164,7 +166,7 @@ public partial class MainWindow
 		w9.Y = 150;
 		// Container child FixedCont.Gtk.Fixed+FixedChild
 		this.buttonResult = new global::Gtk.Button();
-		this.buttonResult.WidthRequest = 100;
+		this.buttonResult.WidthRequest = 50;
 		this.buttonResult.HeightRequest = 50;
 		this.buttonResult.CanFocus = true;
 		this.buttonResult.Name = "buttonResult";
@@ -172,7 +174,7 @@ public partial class MainWindow
 		this.buttonResult.Label = global::Mono.Unix.Catalog.GetString("=");
 		this.FixedCont.Add(this.buttonResult);
 		global::Gtk.Fixed.FixedChild w10 = ((global::Gtk.Fixed.FixedChild)(this.FixedCont[this.buttonResult]));
-		w10.X = 20;
+		w10.X = 120;
 		w10.Y = 200;
 		// Container child FixedCont.Gtk.Fixed+FixedChild
 		this.buttonPlus = new global::Gtk.Button();
@@ -243,8 +245,20 @@ public partial class MainWindow
 		this.button15.Label = global::Mono.Unix.Catalog.GetString("0");
 		this.FixedCont.Add(this.button15);
 		global::Gtk.Fixed.FixedChild w16 = ((global::Gtk.Fixed.FixedChild)(this.FixedCont[this.button15]));
-		w16.X = 120;
+		w16.X = 20;
 		w16.Y = 200;
+		// Container child FixedCont.Gtk.Fixed+FixedChild
+		this.buttonDot = new global::Gtk.Button();
+		this.buttonDot.WidthRequest = 50;
+		this.buttonDot.HeightRequest = 50;
+		this.buttonDot.CanFocus = true;
+		this.buttonDot.Name = "buttonDot";
+		this.buttonDot.UseUnderline = true;
+		this.buttonDot.Label = global::Mono.Unix.Catalog.GetString(".");
+		this.FixedCont.Add(this.buttonDot);
+		global::Gtk.Fixed.FixedChild w17 = ((global::Gtk.Fixed.FixedChild)(this.FixedCont[this.buttonDot]));
+		w17.X = 70;
+		w17.Y = 200;
 		this.Add(this.FixedCont);
 		if ((this.Child != null))
 		{
@@ -267,5 +281,6 @@ public partial class MainWindow
 		this.buttonMultiply.Clicked += new global::System.EventHandler(this.ButtonOperatorClick);
 		this.buttonDivision.Clicked += new global::System.EventHandler(this.ButtonOperatorClick);
 		this.button15.Clicked += new global::System.EventHandler(this.ButtonNumberClick);
+		this.buttonDot.Clicked += new global::System.EventHandler(this.ButtonDotClick);
 	}
 }
